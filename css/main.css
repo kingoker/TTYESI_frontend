@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+
+*{
+    font-family: 'Alice', serif;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.container{
+    margin: 0 auto;
+}
+
+
+/* Шапка */
+.header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px #A4A4A4;
+}
+
+
+/* Главная фотография */
+.mainPicture__container{
+    position: relative;
+}
+.mainPicture__text{
+    position: absolute;
+    bottom: 3%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 448px;
+}
+
+
+/* Список выпускников */
+.students{
+    margin-top: 50px;
+}
+.students__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    justify-content: center;
+}
+.students__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.students__photo{
+    width: 162px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+.students__photo:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.students__text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    color: #313131;
+    transition: all 0.3s ease;
+}
+.students__text:hover{
+    color: #128CDB;
+}
+.mainStudents__container{
+    max-width: 720px;
+}
+.students__all, .students__all a{
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #313131;
+}
+.students__all a:hover{
+    color: #128CDB;
+}
+
+
+/* Подвал */
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px #A4A4A4;
+    margin-top: 50px;
+}
