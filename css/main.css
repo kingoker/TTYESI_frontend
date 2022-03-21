@@ -11,8 +11,49 @@
     object-position: center;
 }
 .container{
-    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    margin: 0 100px;
 }
+.body__wrapper{
+    margin-top: 70px;
+}
+.h1{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #205B7F;
+    padding: 30px 0px;
+}
+.input{
+    background: #FFFFFF;
+    border: 1px solid #313131;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #313131;
+    height: 30px;
+}
+.input::placeholder { 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #E0E0E0;
+}
+.button{
+    min-width: 100px;
+    background: #313131;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
 
 
 /* Шапка */
@@ -28,6 +69,25 @@
     width: 100%;
     background-color: #fff;
     box-shadow: 0px 2px 8px #A4A4A4;
+}
+
+
+/* Фильтры */
+.filters__container, .filters__text{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.filter__text{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    color: #313131;
+    cursor: pointer;
+}
+.filters__search{
+    display: flex;
+    gap: 5px;
 }
 
 
@@ -59,6 +119,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
     justify-content: center;
+}
+.allStudents__list{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 60px;
+    justify-content: center;
+}
+.students__item{
+    max-width: 200px;
 }
 .students__link{
     display: flex;
@@ -94,9 +164,6 @@
 }
 .students__text:hover{
     color: #128CDB;
-}
-.mainStudents__container{
-    max-width: 720px;
 }
 .students__all, .students__all a{
     margin-top: 70px;
