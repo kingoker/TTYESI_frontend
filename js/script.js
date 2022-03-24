@@ -1,8 +1,9 @@
+// Активная стрелка
+const filter = document.querySelectorAll('.filter__text');
 
-const arrow = document.querySelectorAll('.arrow');
-
-arrow.forEach(item =>{
-    item.addEventListener('click', () => {
-        item.classList.toggle('arrow-rotate');
+// console.log(filter);
+filter.forEach(item => {
+    item.addEventListener('click', event => {
+        item.querySelector('.arrow').classList.toggle('arrow-rotate');
     });
 });
