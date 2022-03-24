@@ -101,6 +101,10 @@
     fill: none;
     width: 20px;
     height: 12px;
+    transition: 0.5s all ease;
+}
+.arrow-rotate{
+    transform: rotate(180deg);
 }
 
 
