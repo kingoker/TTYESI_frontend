@@ -25,9 +25,21 @@
         <section class="filters">
             <div class="filters__container container">
                 <div class="filters__text">
-                    <p class="filter__text">Год ᐯ</p>
-                    <p class="filter__text">Факультет ᐯ</p>
-                    <p class="filter__text">Пол ᐯ</p>
+                    <p class="filter__text">Год
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
+                    <p class="filter__text">Факультет
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
+                    <p class="filter__text">Пол
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
                 </div>
                 <form class="filters__search" method="post">
                     <input type="text" class="filters__input input" placeholder="Имя Фамилия">
@@ -113,6 +125,12 @@
             </div>
         </footer>
     </div>
+
+    <svg display="none">
+        <symbol id="arrow">
+            <path d="M1 1L10 10L19 1" stroke="#313131" stroke-width="2"/>
+        </symbol>
+    </svg>
 
     <script src="js/script.js"></script>
 </body>
