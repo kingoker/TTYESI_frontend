@@ -10,7 +10,7 @@
 </head>
 <body class="body">
     <div class="body__wrapper">
-        <div class="header">
+        <header class="header">
             <div class="header__container container">
                 <div class="header__logo">
                     <a href="#">
@@ -18,25 +18,37 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </header>
         
         <h1 class="h1">Лучшие выпускники TTYESI</h1>
 
-        <div class="filters">
+        <section class="filters">
             <div class="filters__container container">
-                <div class="filters__text">
-                    <p class="filter__text">Год ᐯ</p>
-                    <p class="filter__text">Факультет ᐯ</p>
-                    <p class="filter__text">Пол ᐯ</p>
+                <div class="filters__text" id="filters__text">
+                    <p class="filter__text">Год
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
+                    <p class="filter__text">Факультет
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
+                    <p class="filter__text">Пол
+                        <svg class="arrow svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                    </p>
                 </div>
                 <form class="filters__search" method="post">
                     <input type="text" class="filters__input input" placeholder="Имя Фамилия">
                     <button class="filters__button button">Найти</button>
                 </form>
             </div>
-        </div>
+        </section>
 
-        <div class="students">
+        <section class="students">
             <div class="students__container container">
                 <div class="allStudents__list">
                     <div class="students__item">
@@ -101,9 +113,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="footer">
+        <footer class="footer">
             <div class="footer__container container">
                 <div class="footer__logo">
                     <a href="#">
@@ -111,8 +123,14 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
+
+    <svg display="none">
+        <symbol id="arrow">
+            <path d="M1 1L10 10L19 1" stroke="#313131" stroke-width="2"/>
+        </symbol>
+    </svg>
 
     <script src="js/script.js"></script>
 </body>
