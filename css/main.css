@@ -245,7 +245,9 @@
     line-height: 27px;
     color: #131313;
 }
-
+.mainInformation__image{
+    max-height: 380px;
+}
 
 /* Список выпускников */
 .students{
@@ -277,19 +279,19 @@
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: all 0.3s ease;
-}
-.students__photo:hover{
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
     -o-filter: grayscale(0%);
     filter: grayscale(0%);
+    transition: all 0.3s ease;
+}
+.students__photo:hover{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 .students__text{
     font-weight: 400;
