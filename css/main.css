@@ -54,6 +54,10 @@
     line-height: 18px;
     text-align: center;
 }
+.svg, #instagram{
+    height: 100%;
+    width: 100%;
+}
 
 
 
