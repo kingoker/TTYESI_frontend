@@ -283,19 +283,13 @@
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    filter: grayscale(0%);
     transition: all 0.3s ease;
 }
+.students__link:hover .students__text{
+    color: #128CDB;
+}
 .students__photo:hover{
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .students__text{
     font-weight: 400;
