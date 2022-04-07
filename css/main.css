@@ -115,6 +115,9 @@
 /* Главная фотография */
 .mainPicture__container{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mainPicture__text{
     position: absolute;
@@ -336,6 +339,63 @@
     color: #A4A4A4;
     text-align: center;
 }
+
+
+
+
+/* Анимация вращающиеся фотки*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.mainPicture{
+    background-color: #205B7F;
+}
+.mainPicture__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
 
 
 /* Адаптивность */
