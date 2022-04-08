@@ -132,6 +132,51 @@
     color: #FFFFFF;
     max-width: 448px;
 }
+/* Анимация вращающиеся фотки*/
+.mainPicture{
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%);
+}
+.mainPicture__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px;
+}
+.box{
+    margin-top: -100px;
+    position: relative;
+    width: 165px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* Главная информация */
@@ -175,6 +220,7 @@
 .facts span{
     color: #A4A4A4;
 }
+
 
 
 /* Вся информация */
@@ -341,63 +387,6 @@
 }
 
 
-
-
-/* Анимация вращающиеся фотки*/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-.mainPicture{
-    background-color: #205B7F;
-}
-.mainPicture__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 700px;
-}
-.box{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    animation: animate 20s linear infinite;
-}
-@keyframes animate{
-    0%{
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100%{
-        transform: perspective(1000px) rotateY(360deg);
-    }
-}
-.box span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
-}
-.box span img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
-
-
 /* Адаптивность */
 @media (max-width: 1199px) {
     .allStudents__list{
@@ -471,11 +460,6 @@
     }
     .students__list {
         gap: 30px;
-    }
-    .mainPicture__text {
-        bottom: 10%;
-        font-size: 34px;
-        line-height: 37px;
     }
 }
 @media (max-width: 480px) {
